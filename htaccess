@@ -1,20 +1,16 @@
 ErrorDocument 403 /404.html
 ErrorDocument 404 /404.html
 
-DirectoryIndex page28867176.html
+DirectoryIndex index.html
 
 RewriteEngine On
 
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ en/ [R=302,L]
+
+RewriteRule ^(en|ru|ro|uk)/?$ $1/index.html [L]
+
 RewriteCond %{REQUEST_FILENAME} /robots.txt
 RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
-RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
-RewriteRule ^ru$ page26964068.html [NC]
-RewriteRule ^ru/$ page26964068.html [NC]
-
-RewriteRule ^ro$ page28867176.html [NC]
-RewriteRule ^ro/$ page28867176.html [NC]
-
-RewriteRule ^en$ page28867775.html [NC]
-RewriteRule ^en/$ page28867775.html [NC]
-
+RewriteRule ^robots\.txt$ robots_%{HTTP_HOST}.txt [NC,L]
 
