@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow: /*_escaped_fragment_*
+Disallow:
+Disallow: /thanks.html
+
+
+Sitemap: http://libra-logistic.tilda.ws/sitemap.xml
+Host: libra-logistic.tilda.ws

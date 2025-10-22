@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thank you! Request sent</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+  body{font-family:Arial,sans-serif;margin:0;display:flex;min-height:100vh;align-items:center;justify-content:center;background:#f7f7f7;color:#222}
+  .card{max-width:720px;background:#fff;border:1px solid #eee;border-radius:14px;padding:32px;box-shadow:0 6px 20px rgba(0,0,0,.05);text-align:center}
+  h1{margin:0 0 12px;font-size:28px}
+  p{margin:8px 0 0}
+  a.btn{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:10px;text-decoration:none;background:#ff0000;color:#fff;font-weight:700}
+</style>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  (function(){
+    var p = new URLSearchParams(location.search);
+    window.dataLayer.push({
+      event:'form_submit', ok: p.get('ok')==='1',
+      form_name: p.get('form')||'shipping_quote',
+      utm_source:p.get('utm_source'), utm_medium:p.get('utm_medium'),
+      utm_campaign:p.get('utm_campaign'), utm_content:p.get('utm_content'),
+      utm_term:p.get('utm_term'), gclid:p.get('gclid'), fbclid:p.get('fbclid'),
+      lang:'en'
+    });
+  })();
+</script>
+</head><body>
+  <div class="card">
+    <h1>Thank you! Your request has been sent ✅</h1>
+    <p>Our manager will contact you shortly.</p>
+    <a class="btn" href="/en">Home</a>
+  </div>
+</body></html>
