@@ -1,25 +1,17 @@
-ErrorDocument 403 /403.html
-ErrorDocument 404 /404.html
-
-DirectoryIndex index.html
-
 RewriteEngine On
 
-# 0) Не трогаем реальные файлы/папки
+# Не трогаем реальные файлы и папки
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# 1) Редиректим корень на дефолтный язык (если нужно)
-RewriteRule ^$ en/ [R=301,L]
+# Редирект корня на язык (если надо)
+RewriteRule ^$ ru/ [R=301,L]
 
-# 2) Гарантируем слэш после языкового кода
+# Принудительный слэш после языка
 RewriteCond %{REQUEST_URI} ^/(en|ru|ro|ua)$ [NC]
 RewriteRule ^ %1/ [R=301,L]
 
-# 3) Отдаем index.html для корня языковой папки
+# Отдаём index.html для /lang/ и /lang
 RewriteRule ^(en|ru|ro|ua)/?$ $1/index.html [L]
-
-# 4) robots.txt по хосту (если реально нужно)
-RewriteRule ^robots\.txt$ robots_%{HTTP_HOST}.txt [NC,L]
 
