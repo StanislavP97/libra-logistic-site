@@ -2,19 +2,31 @@
 <html>
 
 <head>
-  <base href="/libra-logistic-site/">
+  <script>
+    (function () {
+      var base = document.createElement('base');
+
+      // 1) GitHub Pages для project site
+      if (location.hostname.endsWith('github.io')) {
+        base.href = '/libra-logistic-site/';
+      }
+      // 2) Всё остальное (локалка, Vercel, прод на домене)
+      else {
+        base.href = '/';
+      }
+
+      // если открываешь файл напрямую (file://), без сервера
+      // браузеры игнорируют нормальные пути — просто не делай так.
+      document.head.prepend(base);
+    })();
+  </script>
+
   <meta charset="utf-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--metatextblock-->
-  <title>Libra Logistic</title>
-  <meta name="description" content="Мы знаем правильный путь!" />
-  <meta property="og:url" content="ru" />
-  <meta property="og:title" content="Libra Logistic" />
-  <meta property="og:description" content="Мы знаем правильный путь!" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/tild3830-3930-4534-b263-323133306664__libra-01.png" />
-  <link rel="canonical" href="ru" />
+  <!-- дальше твои link/script с ОТНОСИТЕЛЬНЫМИ путями -->
+  <!-- <link rel="stylesheet" href="css/....css"> и т.д. -->
+
   <!--/metatextblock-->
   <meta name="format-detection" content="telephone=no" />
   <meta http-equiv="x-dns-prefetch-control" content="on" />
@@ -649,7 +661,7 @@
             <div class="t461__alladditional">
               <div class="t461__leftwrapper" style="padding-left: 20px; padding-right: 210px">
                 <div class="t461__additionalwrapper">
-                  <a href="#form" class="scroll-btn">Надіслати запит</a>
+                  <a href="#form" class="scroll-btn">Запросити прорахунок</a>
                 </div>
               </div>
 
@@ -660,7 +672,7 @@
                   background-color: #ff0000;
                   color: #fff !important;
                   font-weight: 600;
-                  font-size: 15px;
+                  font-size: 20px;
                   border-radius: 8px;
                   text-decoration: none;
                   transition: all 0.25s ease;
@@ -1159,7 +1171,7 @@
     <div id="rec435287008" class="r t-rec" style="" data-record-type="215">
       <a name="about" style="font-size: 0"></a>
     </div>
-    <div id="rec448203206" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+    <div id="rec448203206" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
       data-record-type="469">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -1169,8 +1181,8 @@
 
             <div class="t469__descr t-descr t-descr_md t-margin_auto"
               style="font-size:18px; text-align:left; line-height:1.7">
-              <p><strong>Libra Logistic srl</strong> працює в сфері міжнародних перевезень з 2005
-                року. За цей час ми стали надійним партнером для десятків компаній в Україні, Молдові та Європі, для
+              <p><strong>Libra Logistic srl</strong> працює в сфері міжнародних перевезень з <strong>2005 року</strong>
+              . За цей час ми стали надійним партнером для десятків компаній в Україні, Молдові та Європі, для
                 яких важливо доставляти вантажі вчасно та без зайвих витрат.</p>
 
               <p>🔹 <strong>Збірні вантажі</strong> — наша ключова спеціалізація. Гнучкі логістичні рішення від
@@ -1189,9 +1201,8 @@
                 покрита CMR-страхуванням із лімітом відповідальності до <strong>300 000 €.</strong></p>
 
               <div style="text-align:center;">
-                <a href="https://drive.google.com/drive/u/0/folders/1IlWmtn941ri-6Wi_wPelMNHCHs9K4UTg" target="_blank"
-                  class="t-btn"
-                  style="display:inline-block; background:#e60012; color:#fff; padding:12px 28px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
+                <a href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing" target="_blank"
+                  style="display:inline-block; background:#e60012; color:#fff; padding:8px 16px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
                   Перевірити страховку
                 </a>
               </div>
@@ -1256,7 +1267,7 @@
       <a name="contacts" style="font-size: 0"></a>
     </div>
     <!-- ====== OUR CLIENTS (smooth, no-jerk marquee) ====== -->
-    <div id="recOurClients" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+    <div id="recOurClients" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
       data-record-type="469">
       <!-- Якорь для меню -->
       <div id="recClientsAnchor" class="r t-rec" data-record-type="215">
@@ -1658,7 +1669,7 @@
     </div>
     <!-- ====== УСЛУГИ ====== -->
     <div id="rec448213348" class="r t-rec t-rec_pt_180 t-rec_pb_0"
-      style="padding-top:180px; padding-bottom:180px; background-color:#f2f2f2;" data-record-type="469"
+      style="padding-top:80px; padding-bottom:80px; background-color:#f2f2f2;" data-record-type="469"
       data-bg-color="#f2f2f2">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -1802,7 +1813,7 @@
       <a name="directions" style="font-size: 0"></a>
     </div>
     <div id="rec448216919" class="r t-rec t-rec_pt_180 t-rec_pb_45"
-      style="padding-top:180px; padding-bottom:45px; background-color:#f2f2f2;" data-record-type="469"
+      style="padding-top:80px; padding-bottom:45px; background-color:#f2f2f2;" data-record-type="469"
       data-bg-color="#f2f2f2">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -1843,11 +1854,11 @@
             </div>
 
             <div class="t431__data-part2" data-auto-correct-mobile-width="false" style="display:none">
-              (IT, AT, SLO, HR, CH);Італія, Австрія, Словенія, Хорватія, Швейцарія;3 р/тиж..;4–9 днів
-              (GB, NO, DK, SW);Великобританія, Норвегія, Данія, Швеція;2 р/тиж..;7–10 днів
-              (FR, PT, ES);Франція, Португалія, Іспанія;2 р/тиж..;7–10 днів
-              (DE, BE, NL);Німеччина, Бельгія, Нідерланди;2 р/тиж..;7–10 днів
-              (HU, RO, BA, MK);Угорщина, Румунія, Боснія і Герцеговина, Македонія;3 р/тиж..;4–7 днів
+              IT, AT, SLO, HR, CH;Італія, Австрія, Словенія, Хорватія, Швейцарія;3 р/тиж..;4–9 днів
+              GB, NO, DK, SW;Великобританія, Норвегія, Данія, Швеція;2 р/тиж..;7–10 днів
+              FR, PT, ES;Франція, Португалія, Іспанія;2 р/тиж..;7–10 днів
+              DE, BE, NL;Німеччина, Бельгія, Нідерланди;2 р/тиж..;7–10 днів
+              HU, RO, BA, MK;Угорщина, Румунія, Боснія і Герцеговина, Македонія;3 р/тиж..;4–7 днів
             </div>
           </div>
         </div>
@@ -1860,6 +1871,10 @@
           color: #000;
           min-width: 100px;
         }
+
+          #rec445073318 .t431__table thead tr:nth-child(3) {
+    display: none !important;
+  }
 
         #rec445073318 .t431 .t431__tbody tr:nth-child(1) td {
           border-top: 0 !important;
@@ -1899,7 +1914,7 @@
       </script>
     </div>
 
-    <div id="rec466668944" class="r t-rec t-rec_pb_180" style="background-color:#f2f2f2;" data-record-type="106"
+    <div id="rec466668944" class="r t-rec t-rec_pb_180" style="background-color:#f2f2f2; padding-bottom: 80px;" data-record-type="106"
       data-bg-color="#f2f2f2">
       <div class="t004">
         <div class="t-container">
@@ -1964,11 +1979,120 @@
         </div>
       </div>
     </div>
-    <div id="rec435427308" class="r t-rec" style="" data-record-type="215">
+    
+    <div id="rec435427492" class="r t-rec" style="" data-record-type="215">
+      <a name="transport" style="font-size: 0"></a>
+    </div>
+<div id="rec448218730" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
+  data-record-type="469">
+  <div class="t469">
+    <div class="t-container t-align_center">
+      <div class="t-col t-col_10 t-prefix_1">
+
+        <div class="t469__title t-title t-title_lg t-margin_auto">Транспорт</div>
+        <div class="t-divider t469__line t-margin_auto"></div>
+
+        <div class="t469__descr t-descr t-descr_md t-margin_auto" style="text-align:left;">
+          <div style="font-size:18px" data-customstyle="yes">
+
+            <p>
+              Для перевезення вантажів ми використовуємо власний парк сучасних автомобілів та співпрацюємо з надійними
+              регіональними перевізниками. Це дозволяє підібрати транспорт під будь-яке завдання — від експрес-доставки
+              невеликих партій до перевезення великогабаритних вантажів.
+            </p>
+            <br>
+
+            <p><strong>🔹 Власний автопарк</strong></p>
+            <ul>
+              <li>Тягачі класу <strong>Euro 6</strong> вантажопідйомністю до 24 т.</li>
+              <li>Напівпричепи об’ємом до <strong>92 м³</strong>, висотою до <strong>2,75 м</strong>.</li>
+              <li>Місткість до <strong>33 європалет</strong> (1,2 × 0,8 м).</li>
+              <li>Можливість бокового, верхнього та заднього завантаження.</li>
+            </ul>
+            <br>
+
+            <p><strong>🔹 Гнучкість рішень</strong></p>
+            <p>
+              Окрім стандартних вантажівок, ми використовуємо малотоннажні транспортні засоби для експрес-доставок від
+              <strong>50 кг</strong> до <strong>3 т</strong>.
+            </p>
+            <br>
+
+            <p><strong>🔹 Безпека та контроль</strong></p>
+            <ul>
+              <li>Досвідчені сертифіковані водії.</li>
+              <li>ADR-обладнання для перевезення небезпечних вантажів.</li>
+              <li>GPS-контроль руху транспорту в реальному часі.</li>
+            </ul>
+            <br>
+
+            <p>
+              <strong>Libra Logistic</strong> пропонує клієнтам повний спектр транспортних рішень, що відповідають
+              міжнародним стандартам безпеки та якості.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="rec435414705" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
+      <!-- cover -->
+      <div class="t-cover" id="recorddiv435414705" bgimgfield="img" style="
+            height: 700px;
+            background-image: url('images/tild3965-3761-4666-a561-633866326438__-__resize__20x__denys-nevozhai-7nrsv.jpg');
+          ">
+        <div class="t-cover__carrier" id="coverCarry435414705" data-content-cover-id="435414705"
+          data-content-cover-bg="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg"
+          data-display-changed="true" data-content-cover-height="700px" data-content-cover-parallax="fixed"
+          data-content-use-image-for-mobile-cover="" style="height: 700px" itemscope
+          itemtype="http://schema.org/ImageObject">
+          <meta itemprop="image" content="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg" />
+        </div>
+        <div class="t-cover__filter" style="
+              height: 700px;
+              background-image: -moz-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -webkit-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -o-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -ms-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5000000', endColorstr='#b2000000');
+            "></div>
+        <div class="t148">
+          <div class="t-container_100">
+            <div class="t-cover__wrapper t-valign_bottom" style="height: 700px"></div>
+          </div>
+        </div>
+      </div>
+      <div id="rec435427308" class="r t-rec" style="" data-record-type="215">
       <a name="guarantee" style="font-size: 0"></a>
     </div>
  <!-- ====== FAQ ====== -->
-    <div id="rec448215263" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+    <div id="rec448215263" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
       data-record-type="469">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -2145,7 +2269,7 @@
       <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
     </svg>
   </summary>
-  <div class="faq-a">Ні. Ми працюємо зі стандартними тентованими машинами, які підходять для більшості типів вантажів. Для температурно-чутливих товарів рекомендуємо звертатися до спеціалізованих компаній.</div>
+  <div class="faq-a">Для вантажів, що потребують спеціального температурного режиму, рекомендуємо звертатися до спеціалізованих перевізників.</div>
 </details>
 
 <!-- 15 -->
@@ -2364,118 +2488,10 @@
         </div>
       </div>
     </div>
-    <div id="rec435427492" class="r t-rec" style="" data-record-type="215">
-      <a name="transport" style="font-size: 0"></a>
-    </div>
-<div id="rec448218730" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
-  data-record-type="469">
-  <div class="t469">
-    <div class="t-container t-align_center">
-      <div class="t-col t-col_10 t-prefix_1">
-
-        <div class="t469__title t-title t-title_lg t-margin_auto">Транспорт</div>
-        <div class="t-divider t469__line t-margin_auto"></div>
-
-        <div class="t469__descr t-descr t-descr_md t-margin_auto" style="text-align:left;">
-          <div style="font-size:18px" data-customstyle="yes">
-
-            <p>
-              Для перевезення вантажів ми використовуємо власний парк сучасних автомобілів та співпрацюємо з надійними
-              регіональними перевізниками. Це дозволяє підібрати транспорт під будь-яке завдання — від експрес-доставки
-              невеликих партій до перевезення великогабаритних вантажів.
-            </p>
-            <br>
-
-            <p><strong>🔹 Власний автопарк</strong></p>
-            <ul>
-              <li>Тягачі класу <strong>Euro 6</strong> вантажопідйомністю до 24 т.</li>
-              <li>Напівпричепи об’ємом до <strong>92 м³</strong>, висотою до <strong>2,75 м</strong>.</li>
-              <li>Місткість до <strong>33 європалет</strong> (1,2 × 0,8 м).</li>
-              <li>Можливість бокового, верхнього та заднього завантаження.</li>
-            </ul>
-            <br>
-
-            <p><strong>🔹 Гнучкість рішень</strong></p>
-            <p>
-              Окрім стандартних вантажівок, ми використовуємо малотоннажні транспортні засоби для експрес-доставок від
-              <strong>50 кг</strong> до <strong>3 т</strong>.
-            </p>
-            <br>
-
-            <p><strong>🔹 Безпека та контроль</strong></p>
-            <ul>
-              <li>Досвідчені сертифіковані водії.</li>
-              <li><strong>ADR</strong>-обладнання для перевезення небезпечних вантажів.</li>
-              <li><strong>GPS</strong>-контроль руху транспорту в реальному часі.</li>
-            </ul>
-            <br>
-
-            <p>
-              <strong>Libra Logistic</strong> пропонує клієнтам повний спектр транспортних рішень, що відповідають
-              міжнародним стандартам безпеки та якості.
-            </p>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    <div id="rec435414705" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
-      <!-- cover -->
-      <div class="t-cover" id="recorddiv435414705" bgimgfield="img" style="
-            height: 700px;
-            background-image: url('images/tild3965-3761-4666-a561-633866326438__-__resize__20x__denys-nevozhai-7nrsv.jpg');
-          ">
-        <div class="t-cover__carrier" id="coverCarry435414705" data-content-cover-id="435414705"
-          data-content-cover-bg="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg"
-          data-display-changed="true" data-content-cover-height="700px" data-content-cover-parallax="fixed"
-          data-content-use-image-for-mobile-cover="" style="height: 700px" itemscope
-          itemtype="http://schema.org/ImageObject">
-          <meta itemprop="image" content="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg" />
-        </div>
-        <div class="t-cover__filter" style="
-              height: 700px;
-              background-image: -moz-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -webkit-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -o-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -ms-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5000000', endColorstr='#b2000000');
-            "></div>
-        <div class="t148">
-          <div class="t-container_100">
-            <div class="t-cover__wrapper t-valign_bottom" style="height: 700px"></div>
-          </div>
-        </div>
-      </div>
       <!-- T148 -->
       <!-- === START: ФОРМА ЗАЯВКИ === -->
       <div id="rec448218733 form" class="r t-rec t-rec_pt_180 t-rec_pb_180"
-        style="padding-top: 180px; padding-bottom: 180px" data-record-type="469">
+        style="padding-top: 80px; padding-bottom: 80px" data-record-type="469">
         <div id="rec448218730" class="r t-rec" data-record-type="469">
           <div id="recFormAnchor" class="r t-rec" data-record-type="215">
             <a name="form" style="font-size:0;"></a>
@@ -2546,7 +2562,7 @@
                     padding: 12px 14px;
                     border: 1px solid #dcdcdc;
                     border-radius: 10px;
-                    font-size: 15px;
+                    font-size: 14px;
                     background: #fafafa;
                     outline: none;
                     transition: border-color .2s, box-shadow .2s;
@@ -2666,8 +2682,8 @@
                       <input name="company" type="text" required>
                     </div>
                     <div class="form-field">
-                      <label>Номер телефону</label>
-                      <input name="phone" type="tel" placeholder="+ ...">
+                      <label>Номер телефону*</label>
+                      <input name="phone" type="tel" placeholder="+ ..." required>
                     </div>
                     <div class="form-field">
                       <label>Email*</label>

@@ -2,7 +2,31 @@
 <html>
 
 <head>
-    <base href="/libra-logistic-site/">
+  <script>
+    (function () {
+      var base = document.createElement('base');
+
+      // 1) GitHub Pages для project site
+      if (location.hostname.endsWith('github.io')) {
+        base.href = '/libra-logistic-site/';
+      }
+      // 2) Всё остальное (локалка, Vercel, прод на домене)
+      else {
+        base.href = '/';
+      }
+
+      // если открываешь файл напрямую (file://), без сервера
+      // браузеры игнорируют нормальные пути — просто не делай так.
+      document.head.prepend(base);
+    })();
+  </script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- дальше твои link/script с ОТНОСИТЕЛЬНЫМИ путями -->
+  <!-- <link rel="stylesheet" href="css/....css"> и т.д. -->
+
   <meta charset="utf-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -650,7 +674,7 @@
             <div class="t461__alladditional">
               <div class="t461__leftwrapper" style="padding-left: 20px; padding-right: 210px">
                 <div class="t461__additionalwrapper">
-                  <a href="#form" class="scroll-btn">Trimiteți o solicitare</a>
+                  <a href="#form" class="scroll-btn">Solicită o cotație</a>
                 </div>
               </div>
 
@@ -661,7 +685,7 @@
                   background-color: #ff0000;
                   color: #fff !important;
                   font-weight: 600;
-                  font-size: 15px;
+                  font-size: 20px;
                   border-radius: 8px;
                   text-decoration: none;
                   transition: all 0.25s ease;
@@ -1159,7 +1183,7 @@
     <div id="rec435287008" class="r t-rec" style="" data-record-type="215">
       <a name="about" style="font-size: 0"></a>
     </div>
-    <div id="rec448203206" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+    <div id="rec448203206" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
       data-record-type="469">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -1170,7 +1194,7 @@
             <div class="t469__descr t-descr t-descr_md t-margin_auto"
               style="font-size:18px; text-align:left; line-height:1.7">
               <p><strong>Libra Logistic srl</strong> activează în domeniul transporturilor
-                internaționale din anul 2005. De-a lungul timpului am devenit un partener de încredere pentru zeci de
+                internaționale din <strong>anul 2005</strong>. De-a lungul timpului am devenit un partener de încredere pentru zeci de
                 companii din Ucraina, Republica Moldova și Europa, pentru care livrarea mărfurilor la timp și fără
                 costuri suplimentare este o prioritate.</p>
 
@@ -1191,9 +1215,8 @@
                 Logistic srl este acoperită de asigurare CMR, cu un plafon de răspundere de până la 300 000 €.</p>
 
               <div style="text-align:center;">
-                <a href="https://drive.google.com/drive/u/0/folders/1IlWmtn941ri-6Wi_wPelMNHCHs9K4UTg" target="_blank"
-                  class="t-btn"
-                  style="display:inline-block; background:#e60012; color:#fff; padding:12px 28px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
+                <a href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing" target="_blank"
+                  style="display:inline-block; background:#e60012; color:#fff; padding:8px 16px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
                   Verifică polița de asigurare
                 </a>
               </div>
@@ -1255,7 +1278,7 @@
     <a name="contacts" style="font-size: 0"></a>
   </div>
   <!-- ====== OUR CLIENTS ====== -->
-  <div id="recOurClients" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+  <div id="recOurClients" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
     data-record-type="469">
     <div id="recClientsAnchor" class="r t-rec" data-record-type="215">
       <a name="our-clients" style="font-size:0;"></a>
@@ -1653,7 +1676,7 @@
   </div>
   <!-- ====== УСЛУГИ ====== -->
   <div id="rec448213348" class="r t-rec t-rec_pt_180 t-rec_pb_0"
-    style="padding-top:180px; padding-bottom:0; background-color:#f2f2f2;" data-record-type="469"
+    style="padding-top:80px; padding-bottom:0; background-color:#f2f2f2;" data-record-type="469"
     data-bg-color="#f2f2f2">
     <div class="t469">
       <div class="t-container t-align_center">
@@ -1700,7 +1723,7 @@
 
   <!-- ====== ОСНОВНЫЕ УСЛУГИ ====== -->
   <div id="rec435295881" class="r t-rec t-rec_pt_45 t-rec_pb_180"
-    style="padding-top:45px; padding-bottom:180px; background-color:#f2f2f2;" data-record-type="521"
+    style="padding-top:45px; padding-bottom:80px; background-color:#f2f2f2;" data-record-type="521"
     data-bg-color="#f2f2f2">
     <div class="t521">
       <div class="t-container">
@@ -1815,7 +1838,7 @@
   </div>
   <!-- ====== ГЕОГРАФИЯ ПЕРЕВОЗОК ====== -->
   <div id="rec448216919" class="r t-rec t-rec_pt_180 t-rec_pb_45"
-    style="padding-top:180px; padding-bottom:45px; background-color:#f2f2f2;" data-record-type="469"
+    style="padding-top:80px; padding-bottom:45px; background-color:#f2f2f2;" data-record-type="469"
     data-bg-color="#f2f2f2">
     <div class="t469">
       <div class="t-container t-align_center">
@@ -1860,11 +1883,11 @@
           </div>
 
           <div class="t431__data-part2" data-auto-correct-mobile-width="false" style="display:none">
-            (IT, AT, SLO, HR, CH);Italia, Austria, Slovenia, Croația, Elveția;3 ori / săptămână;4–9 zile
-            (GB, NO, DK, SW);Marea Britanie, Norvegia, Danemarca, Suedia;2 ori / săptămână;7–10 zile
-            (FR, PT, ES);Franța, Portugalia, Spania;2 ori / săptămână;7–10 zile
-            (DE, BE, NL);Germania, Belgia, Olanda;2 ori / săptămână;7–10 zile
-            (HU, RO, BA, MK);Hungary, Romania, Bosnia and Herzegovina, Macedonia;3 ori / săptămână;4–7 zile
+            IT, AT, SLO, HR, CH;Italia, Austria, Slovenia, Croația, Elveția;3 ori / săptămână;4–9 zile
+            GB, NO, DK, SW;Marea Britanie, Norvegia, Danemarca, Suedia;2 ori / săptămână;7–10 zile
+            FR, PT, ES;Franța, Portugalia, Spania;2 ori / săptămână;7–10 zile
+            DE, BE, NL;Germania, Belgia, Olanda;2 ori / săptămână;7–10 zile
+            HU, RO, BA, MK;Hungary, Romania, Bosnia and Herzegovina, Macedonia;3 ori / săptămână;4–7 zile
           </div>
         </div>
       </div>
@@ -1877,6 +1900,10 @@
         color: #000;
         min-width: 100px;
       }
+
+                #rec445073318 .t431__table thead tr:nth-child(3) {
+    display: none !important;
+  }
 
       #rec445073318 .t431 .t431__tbody tr:nth-child(1) td {
         border-top: 0 !important;
@@ -1916,7 +1943,7 @@
     </script>
   </div>
 
-  <div id="rec466668944" class="r t-rec t-rec_pb_180" style="background-color:#f2f2f2;" data-record-type="106"
+  <div id="rec466668944" class="r t-rec t-rec_pb_180" style="background-color:#f2f2f2; padding-bottom: 80px;" data-record-type="106"
     data-bg-color="#f2f2f2">
     <div class="t004">
       <div class="t-container">
@@ -1981,11 +2008,118 @@
       </div>
     </div>
   </div>
-  <div id="rec435427308" class="r t-rec" style="" data-record-type="215">
+  <div id="rec466673270" class="r t-rec" style="" data-record-type="215">
+    <a name="transport" style="font-size: 0"></a>
+  </div>
+  <div id="rec448218730" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
+    data-record-type="469">
+    <div class="t469">
+      <div class="t-container t-align_center">
+        <div class="t-col t-col_10 t-prefix_1">
+
+          <div class="t469__title t-title t-title_lg t-margin_auto">Transport</div>
+          <div class="t-divider t469__line t-margin_auto"></div>
+
+          <div class="t469__descr t-descr t-descr_md t-margin_auto" style="text-align:left;">
+            <div style="font-size:18px" data-customstyle="yes">
+
+              <p>
+                Pentru transportul mărfurilor folosim parcul propriu de vehicule moderne și colaborăm cu transportatori
+                regionali de încredere. Aceasta ne permite să alegem mijlocul de transport potrivit pentru orice sarcină
+                —
+                de la livrări expres de cantități mici până la transportul mărfurilor de mari dimensiuni.
+              </p>
+              <br>
+
+              <p><strong>🔹 Parc auto propriu</strong></p>
+              <ul>
+                <li>Tractoare Euro 6 cu capacitate de până la <strong>24 t</strong>.</li>
+                <li>Semiremorci cu volum de până la <strong>92 m³</strong> și înălțime de până la <strong>2,75
+                    m</strong>.</li>
+                <li>Capacitate de până la <strong>33 de paleți europeni</strong> (1,2 × 0,8 m).</li>
+                <li>Posibilitate de încărcare laterală, superioară și posterioară.</li>
+              </ul>
+              <br>
+
+              <p><strong>🔹 Flexibilitate în soluții</strong></p>
+              <p>
+                Pe lângă camioanele standard, folosim și vehicule ușoare pentru livrări expres de la
+                <strong>50 kg</strong> până la <strong>3 t</strong>.
+              </p>
+              <br>
+
+              <p><strong>🔹 Siguranță și control</strong></p>
+              <ul>
+                <li>Șoferi experimentați și certificați.</li>
+                <li>Echipamente <strong>ADR</strong> pentru transportul mărfurilor periculoase.</li>
+                <li>Control <strong>GPS</strong> al mișcării vehiculului în timp real.</li>
+              </ul>
+              <br>
+
+              <p>
+                <strong>Libra Logistic</strong> oferă clienților un set complet de soluții de transport, conform
+                standardelor internaționale de siguranță și calitate.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="rec435414705" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
+      <!-- cover -->
+      <div class="t-cover" id="recorddiv435414705" bgimgfield="img" style="
+            height: 700px;
+            background-image: url('images/tild3965-3761-4666-a561-633866326438__-__resize__20x__denys-nevozhai-7nrsv.jpg');
+          ">
+        <div class="t-cover__carrier" id="coverCarry435414705" data-content-cover-id="435414705"
+          data-content-cover-bg="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg"
+          data-display-changed="true" data-content-cover-height="700px" data-content-cover-parallax="fixed"
+          data-content-use-image-for-mobile-cover="" style="height: 700px" itemscope
+          itemtype="http://schema.org/ImageObject">
+          <meta itemprop="image" content="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg" />
+        </div>
+        <div class="t-cover__filter" style="
+              height: 700px;
+              background-image: -moz-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -webkit-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -o-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -ms-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5000000', endColorstr='#b2000000');
+            "></div>
+        <div class="t148">
+          <div class="t-container_100">
+            <div class="t-cover__wrapper t-valign_bottom" style="height: 700px"></div>
+          </div>
+        </div>
+      </div>
+        <div id="rec435427308" class="r t-rec" style="" data-record-type="215">
     <a name="guarantee" style="font-size: 0"></a>
   </div>
   <!-- ====== FAQ ====== -->
-  <div id="rec448215263" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+  <div id="rec448215263" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
     data-record-type="469">
     <div class="t469">
       <div class="t-container t-align_center">
@@ -2418,118 +2552,11 @@
       </div>
     </div>
   </div>
-  <div id="rec466673270" class="r t-rec" style="" data-record-type="215">
-    <a name="transport" style="font-size: 0"></a>
-  </div>
-  <div id="rec448218730" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
-    data-record-type="469">
-    <div class="t469">
-      <div class="t-container t-align_center">
-        <div class="t-col t-col_10 t-prefix_1">
-
-          <div class="t469__title t-title t-title_lg t-margin_auto">Transport</div>
-          <div class="t-divider t469__line t-margin_auto"></div>
-
-          <div class="t469__descr t-descr t-descr_md t-margin_auto" style="text-align:left;">
-            <div style="font-size:18px" data-customstyle="yes">
-
-              <p>
-                Pentru transportul mărfurilor folosim parcul propriu de vehicule moderne și colaborăm cu transportatori
-                regionali de încredere. Aceasta ne permite să alegem mijlocul de transport potrivit pentru orice sarcină
-                —
-                de la livrări expres de cantități mici până la transportul mărfurilor de mari dimensiuni.
-              </p>
-              <br>
-
-              <p><strong>🔹 Parc auto propriu</strong></p>
-              <ul>
-                <li>Tractoare Euro 6 cu capacitate de până la <strong>24 t</strong>.</li>
-                <li>Semiremorci cu volum de până la <strong>92 m³</strong> și înălțime de până la <strong>2,75
-                    m</strong>.</li>
-                <li>Capacitate de până la <strong>33 de paleți europeni</strong> (1,2 × 0,8 m).</li>
-                <li>Posibilitate de încărcare laterală, superioară și posterioară.</li>
-              </ul>
-              <br>
-
-              <p><strong>🔹 Flexibilitate în soluții</strong></p>
-              <p>
-                Pe lângă camioanele standard, folosim și vehicule ușoare pentru livrări expres de la
-                <strong>50 kg</strong> până la <strong>3 t</strong>.
-              </p>
-              <br>
-
-              <p><strong>🔹 Siguranță și control</strong></p>
-              <ul>
-                <li>Șoferi experimentați și certificați.</li>
-                <li>Echipamente <strong>ADR</strong> pentru transportul mărfurilor periculoase.</li>
-                <li>Control <strong>GPS</strong> al mișcării vehiculului în timp real.</li>
-              </ul>
-              <br>
-
-              <p>
-                <strong>Libra Logistic</strong> oferă clienților un set complet de soluții de transport, conform
-                standardelor internaționale de siguranță și calitate.
-              </p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div id="rec435414705" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
-      <!-- cover -->
-      <div class="t-cover" id="recorddiv435414705" bgimgfield="img" style="
-            height: 700px;
-            background-image: url('images/tild3965-3761-4666-a561-633866326438__-__resize__20x__denys-nevozhai-7nrsv.jpg');
-          ">
-        <div class="t-cover__carrier" id="coverCarry435414705" data-content-cover-id="435414705"
-          data-content-cover-bg="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg"
-          data-display-changed="true" data-content-cover-height="700px" data-content-cover-parallax="fixed"
-          data-content-use-image-for-mobile-cover="" style="height: 700px" itemscope
-          itemtype="http://schema.org/ImageObject">
-          <meta itemprop="image" content="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg" />
-        </div>
-        <div class="t-cover__filter" style="
-              height: 700px;
-              background-image: -moz-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -webkit-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -o-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -ms-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5000000', endColorstr='#b2000000');
-            "></div>
-        <div class="t148">
-          <div class="t-container_100">
-            <div class="t-cover__wrapper t-valign_bottom" style="height: 700px"></div>
-          </div>
-        </div>
-      </div>
   <div id="rec466673272" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
     <!-- T148 -->
     <!-- === START: ФОРМА ЗАЯВКИ === -->
     <div id="rec448218733 form" class="r t-rec t-rec_pt_180 t-rec_pb_180"
-      style="padding-top: 180px; padding-bottom: 180px" data-record-type="469">
+      style="padding-top: 80px; padding-bottom: 80px" data-record-type="469">
       <div id="rec448218730" class="r t-rec" data-record-type="469">
         <div id="recFormAnchor" class="r t-rec" data-record-type="215">
           <a name="form" style="font-size:0;"></a>
@@ -2600,7 +2627,7 @@
                   padding: 12px 14px;
                   border: 1px solid #dcdcdc;
                   border-radius: 10px;
-                  font-size: 15px;
+                  font-size: 14px;
                   background: #fafafa;
                   outline: none;
                   transition: border-color .2s, box-shadow .2s;
@@ -2720,7 +2747,7 @@
                   </div>
                   <div class="form-field">
                     <label>Număr de telefon</label>
-                    <input name="phone" type="tel" placeholder="+ ...">
+                    <input name="phone" type="tel" placeholder="+ ..." required>
                   </div>
                   <div class="form-field">
                     <label>Email*</label>
@@ -2871,61 +2898,6 @@
     <div id="rec435287014" class="r t-rec" style="" data-record-type="215">
       <a name="contacts" style="font-size: 0"></a>
     </div>
-
-
-    <div id="rec435414705" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
-      <!-- cover -->
-      <div class="t-cover" id="recorddiv435414705" bgimgfield="img" style="
-            height: 700px;
-            background-image: url('images/tild3965-3761-4666-a561-633866326438__-__resize__20x__denys-nevozhai-7nrsv.jpg');
-          ">
-        <div class="t-cover__carrier" id="coverCarry435414705" data-content-cover-id="435414705"
-          data-content-cover-bg="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg"
-          data-display-changed="true" data-content-cover-height="700px" data-content-cover-parallax="fixed"
-          data-content-use-image-for-mobile-cover="" style="height: 700px" itemscope
-          itemtype="http://schema.org/ImageObject">
-          <meta itemprop="image" content="images/tild3965-3761-4666-a561-633866326438__denys-nevozhai-7nrsv.jpg" />
-        </div>
-        <div class="t-cover__filter" style="
-              height: 700px;
-              background-image: -moz-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -webkit-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -o-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -ms-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5000000', endColorstr='#b2000000');
-            "></div>
-        <div class="t148">
-          <div class="t-container_100">
-            <div class="t-cover__wrapper t-valign_bottom" style="height: 700px"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="rec435287014" class="r t-rec" style="" data-record-type="215">
-      <a name="contacts" style="font-size: 0"></a>
-    </div>
-    <!-- ====== FOOTER START ====== -->
     <!-- ====== FOOTER START ====== -->
   <footer style="background:#f9f9f9; color:#333; padding:60px 20px 40px; font-family:'TildaSans', Arial, sans-serif;">
     <div id="recFooterAnchor" class="r t-rec" data-record-type="215">

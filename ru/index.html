@@ -2,99 +2,125 @@
 <html>
 
 <head>
-    <base href="/libra-logistic-site/">
-  <meta charset="utf-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--metatextblock-->
-  <title>Libra Logistic</title>
-  <meta name="description" content="Мы знаем правильный путь!" />
-  <meta property="og:url" content="ru" />
-  <meta property="og:title" content="Libra Logistic" />
-  <meta property="og:description" content="Мы знаем правильный путь!" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/tild3830-3930-4534-b263-323133306664__libra-01.png" />
-  <link rel="canonical" href="ru" />
-  <!--/metatextblock-->
-  <meta name="format-detection" content="telephone=no" />
-  <meta http-equiv="x-dns-prefetch-control" content="on" />
-  <link rel="dns-prefetch" href="https://ws.tildacdn.com" />
-  <link rel="shortcut icon" href="images/tild3463-3935-4363-a562-646533393335__faviconv2.png" type="image/x-icon" />
-  <!-- Assets -->
-  <script src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js" async charset="utf-8"></script>
-  <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
-  <link rel="stylesheet" href="css/tilda-blocks-page26964068.min.css?t=1740404218" type="text/css" media="all"
-    onerror="this.loaderr='y';" />
-  <link rel="stylesheet" href="css/tilda-cover-1.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
-  <link rel="stylesheet" href="css/fonts-tildasans.css" type="text/css" media="all" onerror="this.loaderr='y';" />
-  <script nomodule src="js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
-  <script type="text/javascript">
-    function t_onReady(func) {
-      if (document.readyState != "loading") {
-        func();
-      } else {
-        document.addEventListener("DOMContentLoaded", func);
-      }
-    }
-    function t_onFuncLoad(funcName, okFunc, time) {
-      if (typeof window[funcName] === "function") {
-        okFunc();
-      } else {
-        setTimeout(function () {
-          t_onFuncLoad(funcName, okFunc, time);
-        }, time || 100);
-      }
-    }
-    function t_throttle(fn, threshhold, scope) {
-      return function () {
-        fn.apply(scope || this, arguments);
-      };
-    }
-  </script>
-  <script src="js/tilda-scripts-3.0.min.js" charset="utf-8" defer onerror="this.loaderr='y';"></script>
-  <script src="js/tilda-blocks-page26964068.min.js?t=1740404218" charset="utf-8" async
-    onerror="this.loaderr='y';"></script>
-  <script src="js/lazyload-1.3.min.export.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-  <script src="js/tilda-menu-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-  <script src="js/tilda-cover-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-  <script src="js/tilda-t431-table-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-  <script src="js/tilda-skiplink-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-  <script src="js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-  <script type="text/javascript">
-    window.dataLayer = window.dataLayer || [];
-  </script>
-  <script type="text/javascript">
-    (function () {
-      if (
-        /bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(
-          navigator.userAgent
-        ) === false &&
-        typeof sessionStorage != "undefined" &&
-        sessionStorage.getItem("visited") !== "y" &&
-        document.visibilityState
-      ) {
-        var style = document.createElement("style");
-        style.type = "text/css";
-        style.innerHTML =
-          "@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}";
-        document.getElementsByTagName("head")[0].appendChild(style);
-        function t_setvisRecs() {
-          var alr = document.querySelectorAll(".t-records");
-          Array.prototype.forEach.call(alr, function (el) {
-            el.classList.add("t-records_animated");
-          });
-          setTimeout(function () {
-            Array.prototype.forEach.call(alr, function (el) {
-              el.classList.add("t-records_visible");
-            });
-            sessionStorage.setItem("visited", "y");
-          }, 400);
+
+  <head>
+    <script>
+      (function () {
+        var base = document.createElement('base');
+
+        // 1) GitHub Pages для project site
+        if (location.hostname.endsWith('github.io')) {
+          base.href = '/libra-logistic-site/';
         }
-        document.addEventListener("DOMContentLoaded", t_setvisRecs);
+        // 2) Всё остальное (локалка, Vercel, прод на домене)
+        else {
+          base.href = '/';
+        }
+
+        // если открываешь файл напрямую (file://), без сервера
+        // браузеры игнорируют нормальные пути — просто не делай так.
+        document.head.prepend(base);
+      })();
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- дальше твои link/script с ОТНОСИТЕЛЬНЫМИ путями -->
+    <!-- <link rel="stylesheet" href="css/....css"> и т.д. -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--metatextblock-->
+    <title>Libra Logistic</title>
+    <meta name="description" content="Мы знаем правильный путь!" />
+    <meta property="og:url" content="ru" />
+    <meta property="og:title" content="Libra Logistic" />
+    <meta property="og:description" content="Мы знаем правильный путь!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/tild3830-3930-4534-b263-323133306664__libra-01.png" />
+    <link rel="canonical" href="ru" />
+    <!--/metatextblock-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="dns-prefetch" href="https://ws.tildacdn.com" />
+    <link rel="shortcut icon" href="images/tild3463-3935-4363-a562-646533393335__faviconv2.png" type="image/x-icon" />
+    <!-- Assets -->
+    <script src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js" async charset="utf-8"></script>
+    <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
+    <link rel="stylesheet" href="css/tilda-blocks-page26964068.min.css?t=1740404218" type="text/css" media="all"
+      onerror="this.loaderr='y';" />
+    <link rel="stylesheet" href="css/tilda-cover-1.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
+    <link rel="stylesheet" href="css/fonts-tildasans.css" type="text/css" media="all" onerror="this.loaderr='y';" />
+    <script nomodule src="js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      function t_onReady(func) {
+        if (document.readyState != "loading") {
+          func();
+        } else {
+          document.addEventListener("DOMContentLoaded", func);
+        }
       }
-    })();
-  </script>
-</head>
+      function t_onFuncLoad(funcName, okFunc, time) {
+        if (typeof window[funcName] === "function") {
+          okFunc();
+        } else {
+          setTimeout(function () {
+            t_onFuncLoad(funcName, okFunc, time);
+          }, time || 100);
+        }
+      }
+      function t_throttle(fn, threshhold, scope) {
+        return function () {
+          fn.apply(scope || this, arguments);
+        };
+      }
+    </script>
+    <script src="js/tilda-scripts-3.0.min.js" charset="utf-8" defer onerror="this.loaderr='y';"></script>
+    <script src="js/tilda-blocks-page26964068.min.js?t=1740404218" charset="utf-8" async
+      onerror="this.loaderr='y';"></script>
+    <script src="js/lazyload-1.3.min.export.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+    <script src="js/tilda-menu-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+    <script src="js/tilda-cover-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+    <script src="js/tilda-t431-table-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+    <script src="js/tilda-skiplink-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+    <script src="js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <script type="text/javascript">
+      (function () {
+        if (
+          /bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(
+            navigator.userAgent
+          ) === false &&
+          typeof sessionStorage != "undefined" &&
+          sessionStorage.getItem("visited") !== "y" &&
+          document.visibilityState
+        ) {
+          var style = document.createElement("style");
+          style.type = "text/css";
+          style.innerHTML =
+            "@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}";
+          document.getElementsByTagName("head")[0].appendChild(style);
+          function t_setvisRecs() {
+            var alr = document.querySelectorAll(".t-records");
+            Array.prototype.forEach.call(alr, function (el) {
+              el.classList.add("t-records_animated");
+            });
+            setTimeout(function () {
+              Array.prototype.forEach.call(alr, function (el) {
+                el.classList.add("t-records_visible");
+              });
+              sessionStorage.setItem("visited", "y");
+            }, 400);
+          }
+          document.addEventListener("DOMContentLoaded", t_setvisRecs);
+        }
+      })();
+    </script>
+  </head>
 
 <body class="t-body" style="margin: 0">
   <!--allrecords-->
@@ -649,7 +675,7 @@
             <div class="t461__alladditional">
               <div class="t461__leftwrapper" style="padding-left: 20px; padding-right: 210px">
                 <div class="t461__additionalwrapper">
-                  <a href="#form" class="scroll-btn">Оставить заявку</a>
+                  <a href="#form" class="scroll-btn">Запросить просчёт</a>
                 </div>
               </div>
 
@@ -660,7 +686,7 @@
                   background-color: #ff0000;
                   color: #fff !important;
                   font-weight: 600;
-                  font-size: 15px;
+                  font-size: 20px;
                   border-radius: 8px;
                   text-decoration: none;
                   transition: all 0.25s ease;
@@ -1159,7 +1185,7 @@
     <div id="rec435287008" class="r t-rec" style="" data-record-type="215">
       <a name="about" style="font-size: 0"></a>
     </div>
-    <div id="rec448203206" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+    <div id="rec448203206" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
       data-record-type="469">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -1169,7 +1195,8 @@
 
             <div class="t469__descr t-descr t-descr_md t-margin_auto"
               style="font-size:18px; text-align:left; line-height:1.7">
-              <p><strong>Libra Logistic srl</strong> работает в сфере международных перевозок с 2005 года. За это время
+              <p><strong>Libra Logistic srl</strong> работает в сфере международных перевозок с <strong>2005
+                  года</strong>. За это время
                 мы стали надёжным партнёром для десятков компаний в Украине, Молдове и Европе, которым важно доставлять
                 грузы вовремя и без лишних затрат.</p>
 
@@ -1186,9 +1213,8 @@
                 покрыта CMR-страхованием с лимитом ответственности до <strong>300 000 €.</strong></p>
 
               <div style="text-align:center;">
-                <a href="https://drive.google.com/drive/u/0/folders/1IlWmtn941ri-6Wi_wPelMNHCHs9K4UTg" target="_blank"
-                  class="t-btn"
-                  style="display:inline-block; background:#e60012; color:#fff; padding:12px 28px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
+                <a href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing" target="_blank"
+                  style="display:inline-block; background:#e60012; color:#fff; padding:8px 16px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
                   Проверить страховку
                 </a>
               </div>
@@ -1252,7 +1278,7 @@
       </div>
     </div>
     <!-- ====== OUR CLIENTS (smooth, no-jerk marquee) ====== -->
-    <div id="recOurClients" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+    <div id="recOurClients" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
       data-record-type="469">
       <!-- Якорь для меню -->
       <div id="recClientsAnchor" class="r t-rec" data-record-type="215">
@@ -1654,7 +1680,7 @@
     </div>
     <!-- ====== УСЛУГИ ====== -->
     <div id="rec448213348" class="r t-rec t-rec_pt_180 t-rec_pb_0"
-      style="padding-top:180px; padding-bottom:0; background-color:#f2f2f2;" data-record-type="469"
+      style="padding-top:80px; padding-bottom:0; background-color:#f2f2f2;" data-record-type="469"
       data-bg-color="#f2f2f2">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -1695,7 +1721,7 @@
 
     <!-- ====== ОСНОВНЫЕ УСЛУГИ ====== -->
     <div id="rec435295881" class="r t-rec t-rec_pt_45 t-rec_pb_180"
-      style="padding-top:45px; padding-bottom:180px; background-color:#f2f2f2;" data-record-type="521"
+      style="padding-top:45px; padding-bottom:80px; background-color:#f2f2f2;" data-record-type="521"
       data-bg-color="#f2f2f2">
       <div class="t521">
         <div class="t-container">
@@ -1809,7 +1835,7 @@
     </div>
     <!-- ====== ГЕОГРАФИЯ ПЕРЕВОЗОК ====== -->
     <div id="rec448216919" class="r t-rec t-rec_pt_180 t-rec_pb_45"
-      style="padding-top:180px; padding-bottom:45px; background-color:#f2f2f2;" data-record-type="469"
+      style="padding-top:80px; padding-bottom:45px; background-color:#f2f2f2;" data-record-type="469"
       data-bg-color="#f2f2f2">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -1852,11 +1878,11 @@
             </div>
 
             <div class="t431__data-part2" data-auto-correct-mobile-width="false" style="display:none">
-              (IT, AT, SLO, HR, CH);Италия, Австрия, Словения, Хорватия, Швейцария;3 р /нед.;4–9 дней
-              (GB, NO, DK, SW);Великобритания, Норвегия, Дания, Швеция;2 р /нед.;7–10 дней
-              (FR, PT, ES);Франция, Португалия, Испания;2 р /нед.;7–10 дней
-              (DE, BE, NL);Германия, Бельгия, Нидерланды;2 р /нед.;7–10 дней
-              (HU, RO, BA, MK);Венгрия, Румыния, Босния и Герцеговина, Македония;3 р /нед.;4–7 дней
+              IT, AT, SLO, HR, CH;Италия, Австрия, Словения, Хорватия, Швейцария;3 р /нед.;4–9 дней
+              GB, NO, DK, SW;Великобритания, Норвегия, Дания, Швеция;2 р /нед.;7–10 дней
+              FR, PT, ES;Франция, Португалия, Испания;2 р /нед.;7–10 дней
+              DE, BE, NL;Германия, Бельгия, Нидерланды;2 р /нед.;7–10 дней
+              HU, RO, BA, MK;Венгрия, Румыния, Босния и Герцеговина, Македония;3 р /нед.;4–7 дней
             </div>
           </div>
         </div>
@@ -1868,6 +1894,10 @@
           border-color: #000;
           color: #000;
           min-width: 100px;
+        }
+
+        #rec445073318 .t431__table thead tr:nth-child(3) {
+          display: none !important;
         }
 
         #rec445073318 .t431 .t431__tbody tr:nth-child(1) td {
@@ -1908,7 +1938,7 @@
       </script>
     </div>
 
-    <div id="rec466668944" class="r t-rec t-rec_pb_180" style="background-color:#f2f2f2;" data-record-type="106"
+    <div id="rec466668944" class="r t-rec t-rec_pb_180" style="background-color:#f2f2f2; padding-bottom: 80px;" data-record-type="106"
       data-bg-color="#f2f2f2">
       <div class="t004">
         <div class="t-container">
@@ -1923,448 +1953,6 @@
       </div>
     </div>
     <!-- ====== /ГЕОГРАФИЯ ПЕРЕВОЗОК ====== -->
-
-    <div id="rec435413094" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
-      <!-- T148 -->
-      <!-- cover -->
-      <div class="t-cover" id="recorddiv435413094" bgimgfield="img" style="
-            height: 700px;
-            background-image: url('images/tild3736-3437-4736-b533-383662333563__-__resize__20x__aron-visuals-3jbu9tb.jpg');
-          ">
-        <div class="t-cover__carrier" id="coverCarry435413094" data-content-cover-id="435413094"
-          data-content-cover-bg="images/tild3736-3437-4736-b533-383662333563__aron-visuals-3jbu9tb.jpg"
-          data-display-changed="true" data-content-cover-height="700px" data-content-cover-parallax="fixed"
-          data-content-use-image-for-mobile-cover="" style="height: 700px" itemscope
-          itemtype="http://schema.org/ImageObject">
-          <meta itemprop="image" content="images/tild3736-3437-4736-b533-383662333563__aron-visuals-3jbu9tb.jpg" />
-        </div>
-        <div class="t-cover__filter" style="
-              height: 700px;
-              background-image: -moz-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -webkit-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -o-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: -ms-linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              background-image: linear-gradient(
-                top,
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.3)
-              );
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5000000', endColorstr='#b2000000');
-            "></div>
-        <div class="t148">
-          <div class="t-container_100">
-            <div class="t-cover__wrapper t-valign_bottom" style="height: 700px"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="rec435427308" class="r t-rec" style="" data-record-type="215">
-      <a name="guarantee" style="font-size: 0"></a>
-    </div>
-    <!-- ====== FAQ ====== -->
-    <div id="rec448215263" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
-      data-record-type="469">
-      <div class="t469">
-        <div class="t-container t-align_center">
-          <div class="t-col t-col_10 t-prefix_1">
-            <div class="t469__title t-title t-title_lg t-margin_auto">Частые вопросы</div>
-            <div class="t-divider t469__line t-margin_auto"></div>
-
-            <div class="t469__descr t-descr t-descr_md t-margin_auto" style="text-align:left;">
-              <div class="faq" data-customstyle="yes">
-
-                <!-- 1 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">1. Как быстро вы доставляете груз из Европы в Украину или Молдову?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Срок зависит от страны отправления: в среднем от 3 до 12 дней.
-                  </div>
-                </details>
-
-                <!-- 2 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">2. Можно ли отправить небольшой груз, а не полную машину?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Да. Вы платите только за место, которое занимает ваш товар.
-                  </div>
-                </details>
-
-                <!-- 3 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">3. Организуете ли вы перевозку опасных грузов?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Да. У нас есть ADR-сертификаты и оборудование для перевозки большинства классов опасности.
-                  </div>
-                </details>
-
-                <!-- 4 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">4. Что входит в услугу «от двери до двери»?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Забор груза со склада отправителя, оформление всех документов и доставка до склада получателя.
-                  </div>
-                </details>
-
-                <!-- 5 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">5. Как вы гарантируете сохранность груза?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Ответственность перевозчика застрахована по системе CMR; транспорт оснащён GPS для контроля
-                    маршрута.
-                  </div>
-                </details>
-
-                <!-- 6 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">6. Как рассчитать стоимость перевозки?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Оставьте заявку через форму на сайте или свяжитесь с менеджером. Мы подготовим предложение с
-                    оптимальным маршрутом и тарифом под ваш груз. <br>
-                    <em>Подсказка:</em> чем точнее данные (вес, объём, направление, сроки), тем точнее расчёт.
-                  </div>
-                </details>
-
-                <!-- 7 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">7. В чём преимущества сборных доставок?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    <ol class="faq-list">
-                      <li><strong>Ниже стоимость.</strong> Оплата только за фактически занимаемое место, без переплаты
-                        за пустое пространство.</li>
-                      <li><strong>Более частые отправки.</strong> Регулярные рейсы позволяют не ждать полной загрузки
-                        транспорта.</li>
-                      <li><strong>Гибкость.</strong> Возможность отправлять небольшие партии товара по мере готовности.
-                      </li>
-                    </ol>
-                  </div>
-                </details>
-
-                <!-- 8 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">8. Почему стоит выбрать Libra Logistic?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    <ol class="faq-list">
-                      <li><strong>Оптимальные маршруты и снижение расходов.</strong> Мы выстраиваем логистику без лишних
-                        километров и посредников.</li>
-                      <li><strong>Более 15 лет опыта.</strong> Отработанные процессы, знание особенностей маршрутов и
-                        требований клиентов.</li>
-                      <li><strong>Репутация и доверие.</strong> Постоянные партнёры и рекомендации подтверждают
-                        стабильность нашей работы.</li>
-                    </ol>
-                  </div>
-                </details>
-
-
-                <!-- 9 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">9. Можно ли объединить несколько отправлений в одном транспорте?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Да. Консолидируем грузы от разных поставщиков на едином складе, что снижает расходы и ускоряет
-                    доставку.
-                  </div>
-                </details>
-
-                <!-- 10 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">10. С какими документами вы работаете?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Берём на себя основную бумажную работу. Оформляем CMR, EUR1, EX1, TIR, T1 и другие сопроводительные
-                    документы.
-                  </div>
-                </details>
-
-                <!-- 11 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">11. Можно ли отследить движение груза?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Да. Все машины оснащены GPS, доступен контроль маршрута в режиме реального времени.
-                  </div>
-                </details>
-
-                <!-- 12 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">12. Какие грузы вы не перевозите?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Не принимаем грузы для физических лиц. Для уточнения по конкретному грузу свяжитесь с менеджером.
-                  </div>
-                </details>
-
-                <!-- 13 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">13. Перевозите ли вы негабаритные грузы?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Нет. Мы работаем со стандартными и сборными грузами. Для негабарита рекомендуем специализированные
-                    компании.
-                  </div>
-                </details>
-
-                <!-- 14 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">14. Организуете ли вы перевозку с температурным режимом
-                      (рефрижератор)?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Нет. Работаем со стандартными тентованными машинами. Для температурных грузов — специализированные
-                    перевозчики.
-                  </div>
-                </details>
-
-                <!-- 15 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">15. Какие документы нужны для отправки груза?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    Минимум: инвойс и CMR. В зависимости от маршрута и типа груза могут потребоваться дополнительные
-                    документы и сертификаты — поможем подготовить всё необходимое.
-                  </div>
-                </details>
-
-                <!-- 16 -->
-                <details class="faq-item">
-                  <summary class="faq-q">
-                    <span class="faq-q-text">16. Какой документооборот у вас с клиентами?</span>
-                    <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </summary>
-                  <div class="faq-a">
-                    <ol class="faq-list">
-                      <li><strong>Начало сотрудничества.</strong> Подписываем договор, предоставляем сертификаты и пакет
-                        документов для банка/финансового отдела.</li>
-                      <li><strong>Подписание заявки.</strong> Фиксируем условия конкретной перевозки.</li>
-                      <li><strong>Перед границей Украины.</strong> Отправляем справку о транспортных расходах, инвойс и
-                        данные для брокера.</li>
-                      <li><strong>После выгрузки.</strong> Высылаем полный пакет: заявку, счёт, акт. После согласования
-                        обмениваемся оригиналами.</li>
-                    </ol>
-                  </div>
-                </details>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <style>
-      /* Контейнер FAQ в стиле Тильды */
-      .faq {
-        font-size: 18px;
-        line-height: 1.7;
-      }
-
-      .faq-item {
-        background: #fff;
-        border: 1px solid #e8e8e8;
-        border-radius: 12px;
-        padding: 0;
-        margin: 12px 0;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, .04);
-        overflow: hidden;
-      }
-
-      .faq-q {
-        list-style: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        padding: 16px 18px;
-        font-weight: 600;
-        color: #111;
-      }
-
-      .faq-q::-webkit-details-marker {
-        display: none;
-      }
-
-      .faq-q-text {
-        flex: 1;
-      }
-
-      .faq-ico {
-        flex: 0 0 auto;
-        color: #888;
-        transition: transform .25s ease, color .25s ease;
-      }
-
-      .faq-item[open] .faq-ico {
-        transform: rotate(45deg);
-        color: #e60012;
-      }
-
-      .faq-a {
-        padding: 10px 18px 16px 18px;
-        color: #444;
-      }
-
-      /* Мягкая анимация открытия */
-      .faq-item .faq-a {
-        display: grid;
-        grid-template-rows: 0fr;
-        transition: grid-template-rows .35s ease;
-      }
-
-      .faq-item[open] .faq-a {
-        grid-template-rows: 1fr;
-      }
-
-      .faq-item .faq-a>* {
-        overflow: hidden;
-      }
-
-      /* Списки внутри ответов */
-      .faq-list {
-        margin: 8px 0 0 18px;
-        padding: 0;
-      }
-
-      .faq-list li {
-        margin: 6px 0;
-      }
-
-      /* Ховер и фокус */
-      .faq-q:hover {
-        background: #fafafa;
-      }
-
-      .faq-q:focus {
-        outline: 2px solid #e60012;
-        outline-offset: 2px;
-      }
-
-      @media (max-width: 640px) {
-        .faq-q {
-          padding: 14px 14px;
-        }
-
-        .faq-a {
-          padding: 0 14px 14px 14px;
-        }
-      }
-
-      /* Плавность открытия ответов FAQ */
-      .faq-item .faq-a {
-        overflow: hidden;
-        transition: all 0.4s ease;
-        opacity: 0;
-        max-height: 0;
-      }
-
-      .faq-item[open] .faq-a {
-        opacity: 1;
-        max-height: 600px;
-        /* достаточно для длинных ответов */
-      }
-    </style>
-
-    <script>
-      // Необязательно: аккордеон-режим — открыт только один пункт
-      (function () {
-        var root = document.currentScript && document.currentScript.closest('#rec448215263') || document;
-        var items = root.querySelectorAll('.faq-item');
-        items.forEach(function (d) {
-          d.addEventListener('toggle', function () {
-            if (d.open) {
-              items.forEach(function (x) { if (x !== d) x.open = false; });
-            }
-          });
-        });
-      })();
-    </script>
-    <!-- ====== /FAQ ====== -->
-
     <div id="rec448230121" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
       <!-- T148 -->
       <!-- cover -->
@@ -2418,7 +2006,7 @@
     <div id="rec435427492" class="r t-rec" style="" data-record-type="215">
       <a name="transport" style="font-size: 0"></a>
     </div>
-    <div id="rec448218730" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:180px; padding-bottom:180px"
+    <div id="rec448218730" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
       data-record-type="469">
       <div class="t469">
         <div class="t-container t-align_center">
@@ -2448,7 +2036,7 @@
 
                 <p><strong>🔹 Гибкость решений</strong></p>
                 <p>
-                  Наряду со стандартными грузовиками мы используем малотоннажные транспортные средства для
+                  Наряду со стандартными грузовиками, мы используем малотоннажные транспортные средства для
                   экспресс-доставок от <strong>50 кг</strong> до <strong>3 т</strong>.
                 </p>
                 <br>
@@ -2456,8 +2044,8 @@
                 <p><strong>🔹 Безопасность и контроль</strong></p>
                 <ul>
                   <li>Опытные сертифицированные водители.</li>
-                  <li><strong>ADR</strong>-оснащение для перевозки опасных грузов.</li>
-                  <li><strong>GPS-контроль</strong> движения транспорта в реальном времени.</li>
+                  <li>ADR-оснащение для перевозки опасных грузов.</li>
+                  <li>GPS-контроль движения транспорта в реальном времени.</li>
                 </ul>
                 <br>
 
@@ -2521,10 +2109,456 @@
           </div>
         </div>
       </div>
+      <div id="rec435427308" class="r t-rec" style="" data-record-type="215">
+        <a name="guarantee" style="font-size: 0"></a>
+      </div>
+      <!-- ====== FAQ ====== -->
+      <div id="rec448215263" class="r t-rec t-rec_pt_180 t-rec_pb_180" style="padding-top:80px; padding-bottom:80px"
+        data-record-type="469">
+        <div class="t469">
+          <div class="t-container t-align_center">
+            <div class="t-col t-col_10 t-prefix_1">
+              <div class="t469__title t-title t-title_lg t-margin_auto">Частые вопросы</div>
+              <div class="t-divider t469__line t-margin_auto"></div>
+
+              <div class="t469__descr t-descr t-descr_md t-margin_auto" style="text-align:left;">
+                <div class="faq" data-customstyle="yes">
+
+                  <!-- 1 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">1. Как быстро вы доставляете груз из Европы в Украину или Молдову?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Срок зависит от страны отправления: в среднем от 3 до 12 дней.
+                    </div>
+                  </details>
+
+                  <!-- 2 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">2. Можно ли отправить небольшой груз, а не полную машину?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Да. Вы платите только за место, которое занимает ваш товар.
+                    </div>
+                  </details>
+
+                  <!-- 3 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">3. Организуете ли вы перевозку опасных грузов?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Да. У нас есть ADR-сертификаты и оборудование для перевозки большинства классов опасности.
+                    </div>
+                  </details>
+
+                  <!-- 4 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">4. Что входит в услугу «от двери до двери»?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Забор груза со склада отправителя, оформление всех документов и доставка до склада получателя.
+                    </div>
+                  </details>
+
+                  <!-- 5 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">5. Как вы гарантируете сохранность груза?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Ответственность перевозчика застрахована по системе CMR; транспорт оснащён GPS для контроля
+                      маршрута.
+                    </div>
+                  </details>
+
+                  <!-- 6 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">6. Как рассчитать стоимость перевозки?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Оставьте заявку через форму на сайте или свяжитесь с менеджером. Мы подготовим предложение с
+                      оптимальным маршрутом и тарифом под ваш груз. <br>
+                      <em>Подсказка:</em> чем точнее данные (вес, объём, направление, сроки), тем точнее расчёт.
+                    </div>
+                  </details>
+
+                  <!-- 7 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">7. В чём преимущества сборных доставок?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      <ol class="faq-list">
+                        <li><strong>Ниже стоимость.</strong> Оплата только за фактически занимаемое место, без переплаты
+                          за пустое пространство.</li>
+                        <li><strong>Более частые отправки.</strong> Регулярные рейсы позволяют не ждать полной загрузки
+                          транспорта.</li>
+                        <li><strong>Гибкость.</strong> Возможность отправлять небольшие партии товара по мере
+                          готовности.
+                        </li>
+                      </ol>
+                    </div>
+                  </details>
+
+                  <!-- 8 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">8. Почему стоит выбрать Libra Logistic?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      <ol class="faq-list">
+                        <li><strong>Оптимальные маршруты и снижение расходов.</strong> Мы выстраиваем логистику без
+                          лишних
+                          километров и посредников.</li>
+                        <li><strong>Более 15 лет опыта.</strong> Отработанные процессы, знание особенностей маршрутов и
+                          требований клиентов.</li>
+                        <li><strong>Репутация и доверие.</strong> Постоянные партнёры и рекомендации подтверждают
+                          стабильность нашей работы.</li>
+                      </ol>
+                    </div>
+                  </details>
+
+
+                  <!-- 9 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">9. Можно ли объединить несколько отправлений в одном транспорте?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Да. Консолидируем грузы от разных поставщиков на едином складе, что снижает расходы и ускоряет
+                      доставку.
+                    </div>
+                  </details>
+
+                  <!-- 10 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">10. С какими документами вы работаете?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Берём на себя основную бумажную работу. Оформляем CMR, EUR1, EX1, TIR, T1 и другие
+                      сопроводительные
+                      документы.
+                    </div>
+                  </details>
+
+                  <!-- 11 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">11. Можно ли отследить движение груза?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Да. Все машины оснащены GPS, доступен контроль маршрута в режиме реального времени.
+                    </div>
+                  </details>
+
+                  <!-- 12 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">12. Какие грузы вы не перевозите?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Не принимаем грузы для физических лиц. Для уточнения по конкретному грузу свяжитесь с менеджером.
+                    </div>
+                  </details>
+
+                  <!-- 13 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">13. Перевозите ли вы негабаритные грузы?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Нет. Мы работаем со стандартными и сборными грузами. Для негабарита рекомендуем специализированные
+                      компании.
+                    </div>
+                  </details>
+
+                  <!-- 14 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">14. Организуете ли вы перевозку с температурным режимом
+                        (рефрижератор)?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Для грузов, требующих специального температурного режима рекомендуем обращаться к
+                      специализированным перевозчикам.
+                    </div>
+                  </details>
+
+                  <!-- 15 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">15. Какие документы нужны для отправки груза?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      Минимум: инвойс и CMR. В зависимости от маршрута и типа груза могут потребоваться дополнительные
+                      документы и сертификаты — поможем подготовить всё необходимое.
+                    </div>
+                  </details>
+
+                  <!-- 16 -->
+                  <details class="faq-item">
+                    <summary class="faq-q">
+                      <span class="faq-q-text">16. Какой документооборот у вас с клиентами?</span>
+                      <svg class="faq-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </summary>
+                    <div class="faq-a">
+                      <ol class="faq-list">
+                        <li><strong>Начало сотрудничества.</strong> Подписываем договор, предоставляем сертификаты и
+                          пакет
+                          документов для банка/финансового отдела.</li>
+                        <li><strong>Подписание заявки.</strong> Фиксируем условия конкретной перевозки.</li>
+                        <li><strong>Перед границей Украины.</strong> Отправляем справку о транспортных расходах, инвойс
+                          и
+                          данные для брокера.</li>
+                        <li><strong>После выгрузки.</strong> Высылаем полный пакет: заявку, счёт, акт. После
+                          согласования
+                          обмениваемся оригиналами.</li>
+                      </ol>
+                    </div>
+                  </details>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        /* Контейнер FAQ в стиле Тильды */
+        .faq {
+          font-size: 18px;
+          line-height: 1.7;
+        }
+
+        .faq-item {
+          background: #fff;
+          border: 1px solid #e8e8e8;
+          border-radius: 12px;
+          padding: 0;
+          margin: 12px 0;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, .04);
+          overflow: hidden;
+        }
+
+        .faq-q {
+          list-style: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          padding: 16px 18px;
+          font-weight: 600;
+          color: #111;
+        }
+
+        .faq-q::-webkit-details-marker {
+          display: none;
+        }
+
+        .faq-q-text {
+          flex: 1;
+        }
+
+        .faq-ico {
+          flex: 0 0 auto;
+          color: #888;
+          transition: transform .25s ease, color .25s ease;
+        }
+
+        .faq-item[open] .faq-ico {
+          transform: rotate(45deg);
+          color: #e60012;
+        }
+
+        .faq-a {
+          padding: 10px 18px 16px 18px;
+          color: #444;
+        }
+
+        /* Мягкая анимация открытия */
+        .faq-item .faq-a {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows .35s ease;
+        }
+
+        .faq-item[open] .faq-a {
+          grid-template-rows: 1fr;
+        }
+
+        .faq-item .faq-a>* {
+          overflow: hidden;
+        }
+
+        /* Списки внутри ответов */
+        .faq-list {
+          margin: 8px 0 0 18px;
+          padding: 0;
+        }
+
+        .faq-list li {
+          margin: 6px 0;
+        }
+
+        /* Ховер и фокус */
+        .faq-q:hover {
+          background: #fafafa;
+        }
+
+        .faq-q:focus {
+          outline: 2px solid #e60012;
+          outline-offset: 2px;
+        }
+
+        @media (max-width: 640px) {
+          .faq-q {
+            padding: 14px 14px;
+          }
+
+          .faq-a {
+            padding: 0 14px 14px 14px;
+          }
+        }
+
+        /* Плавность открытия ответов FAQ */
+        .faq-item .faq-a {
+          overflow: hidden;
+          transition: all 0.4s ease;
+          opacity: 0;
+          max-height: 0;
+        }
+
+        .faq-item[open] .faq-a {
+          opacity: 1;
+          max-height: 600px;
+          /* достаточно для длинных ответов */
+        }
+      </style>
+
+      <script>
+        // Необязательно: аккордеон-режим — открыт только один пункт
+        (function () {
+          var root = document.currentScript && document.currentScript.closest('#rec448215263') || document;
+          var items = root.querySelectorAll('.faq-item');
+          items.forEach(function (d) {
+            d.addEventListener('toggle', function () {
+              if (d.open) {
+                items.forEach(function (x) { if (x !== d) x.open = false; });
+              }
+            });
+          });
+        })();
+      </script>
+      <div id="rec448230121" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
+        <!-- T148 -->
+        <!-- cover -->
+        <div class="t-cover" id="recorddiv448230121" bgimgfield="img" style="
+            height: 700px;
+            background-image: url('images/tild6136-6239-4866-b931-326264656235__-__resize__20x__cargo-insurance.jpeg');
+          ">
+          <div class="t-cover__carrier" id="coverCarry448230121" data-content-cover-id="448230121"
+            data-content-cover-bg="images/tild6136-6239-4866-b931-326264656235__cargo-insurance.jpeg"
+            data-display-changed="true" data-content-cover-height="700px" data-content-cover-parallax="fixed"
+            data-content-use-image-for-mobile-cover="" style="height: 700px" itemscope
+            itemtype="http://schema.org/ImageObject">
+            <meta itemprop="image" content="images/tild6136-6239-4866-b931-326264656235__cargo-insurance.jpeg" />
+          </div>
+          <div class="t-cover__filter" style="
+              height: 700px;
+              background-image: -moz-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -webkit-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -o-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: -ms-linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              background-image: linear-gradient(
+                top,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5000000', endColorstr='#b2000000');
+            "></div>
+          <div class="t148">
+            <div class="t-container_100">
+              <div class="t-cover__wrapper t-valign_bottom" style="height: 700px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ====== /FAQ ====== -->
       <!-- T148 -->
       <!-- === START: ФОРМА ЗАЯВКИ === -->
       <div id="rec448218733 form" class="r t-rec t-rec_pt_180 t-rec_pb_180"
-        style="padding-top: 180px; padding-bottom: 180px" data-record-type="469">
+        style="padding-top: 80px; padding-bottom: 80px" data-record-type="469">
         <div id="rec448218730" class="r t-rec" data-record-type="469">
           <div id="recFormAnchor" class="r t-rec" data-record-type="215">
             <a name="form" style="font-size:0;"></a>
@@ -2595,7 +2629,7 @@
                     padding: 12px 14px;
                     border: 1px solid #dcdcdc;
                     border-radius: 10px;
-                    font-size: 15px;
+                    font-size: 14px;
                     background: #fafafa;
                     outline: none;
                     transition: border-color .2s, box-shadow .2s;
@@ -2715,8 +2749,8 @@
                       <input name="company" type="text" required>
                     </div>
                     <div class="form-field">
-                      <label>Номер телефона</label>
-                      <input name="phone" type="tel" placeholder="+ ...">
+                      <label>Номер телефона*</label>
+                      <input name="phone" type="tel" placeholder="+ ..." required>
                     </div>
                     <div class="form-field">
                       <label>Email*</label>
