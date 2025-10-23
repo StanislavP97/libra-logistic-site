@@ -659,7 +659,7 @@
               </ul>
             </nav>
             <div class="t461__alladditional">
-              <div class="t461__leftwrapper" style="padding-left: 20px; padding-right: 210px">
+              <div class="t461__leftwrapper" style="padding-left: 0; padding-right: 270px">
                 <div class="t461__additionalwrapper">
                   <a href="#form" class="scroll-btn">Запросити прорахунок</a>
                 </div>
@@ -669,7 +669,7 @@
                 .scroll-btn {
                   display: inline-block;
                   padding: 10px 24px;
-                  background-color: black;
+                  background-color:  #ff0000;
                   color: #fff !important;
                   font-weight: 600;
                   font-size: 20px;
@@ -1198,14 +1198,36 @@
               </p>
 
               <p><strong>Застрахована відповідальність перевізника</strong> — Вся діяльність компанії
-                покрита CMR-страхуванням із лімітом відповідальності до <strong>300 000 €.</strong></p>
+                покрита CMR-страхуванням із лімітом відповідальності до <strong>300 000 €.</strong> <a class="btn-image" href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing"
+   target="_blank"
+   style="display:inline-flex; align-items:center; gap:8px; color:rgb(68,67,67); font-weight:600; text-decoration:none; transition:background .3s;">
+  <span>Перевірити страховку</span>
+  <img src="images/tap.png" 
+       alt="Click icon" 
+       width="30" 
+       height="30"
+       style="display:inline-block; vertical-align:middle;">
+</a>
+      <style>
+        .btn-image:hover img {
+  animation: pulse 0.8s infinite;
+}
 
-              <div style="text-align:left;">
-                <a href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing" target="_blank"
-                  style="display:inline-block; background:#9c9596; color:#fff; padding:8px 16px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
-                  Перевірити страховку
-                </a>
-              </div>
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+      </style></p>
 
               <p style="margin-top:24px;"><strong>Довірте нам ваш вантаж — і переконайтеся, що логістика може бути простою,
                 прозорою та передбачуваною.</strong></p>
@@ -1806,7 +1828,7 @@
 
             <div class="t431__data-part2" data-auto-correct-mobile-width="false" style="display:none">
               IT, AT, SLO, HR, CH;Італія, Австрія, Словенія, Хорватія, Швейцарія;3 р/тиж..;4–9 днів
-              GB, NO, DK, SW;Великобританія, Норвегія, Данія, Швеція;2 р/тиж..;7–10 днів
+              GB, NO, DK, SE;Великобританія, Норвегія, Данія, Швеція;2 р/тиж..;7–10 днів
               FR, PT, ES;Франція, Португалія, Іспанія;2 р/тиж..;7–10 днів
               DE, BE, NL;Німеччина, Бельгія, Нідерланди;2 р/тиж..;7–10 днів
               HU, RO, BA, MK;Угорщина, Румунія, Боснія і Герцеговина, Македонія;3 р/тиж..;4–7 днів
@@ -1871,8 +1893,8 @@
         <div class="t-container">
           <div class="t-col t-col_8">
             <div class="t-text t-text_md" field="text">
-              <div style="font-size:18px; padding-left: 100px;" data-customstyle="yes">
-                <strong>* Для країн, не зазначених у списку, ми підбираємо індивідуальні рішення під конкретний запит.</strong>
+              <div style="font-size:18px; padding-left: 100px; width: 100%;" data-customstyle="yes">
+              * Для країн, не зазначених у списку, ми підбираємо індивідуальні рішення під конкретний запит.
               </div>
             </div>
           </div>
@@ -2394,7 +2416,7 @@
     <!-- ====== /FAQ ====== -->
          <style>
         .t469__title {
-          font-size: 54px !important;
+          font-size: 38px !important;
           margin-bottom: 10px !important;
         }
       </style>
@@ -2691,7 +2713,7 @@
         </div>
 
         <h3>Додаткові послуги</h3>
-        <p class="form-section-subtitle">Позначте, якщо хочете замовити:</p>
+        <p class="form-section-subtitle" style="font-size: 13px;">Позначте, якщо хочете замовити:</p>
         <div class="form-grid grid-cols-2">
           <div class="form-checkbox-group">
             <label><input type="checkbox" name="extra_services[]" value="Export customs"> Митне оформлення під час відправлення</label>
@@ -2703,7 +2725,7 @@
           </div>
         </div>
 
-        <h3>Як з вами зв'язатися?</h3>
+        <h3>Як зручніше з вами зв'язатися</h3>
         <div class="form-checkbox-group" style="flex-direction:row; gap:20px;">
           <label><input type="checkbox" name="reply_channel[]" value="Email"> Email</label>
           <label><input type="checkbox" name="reply_channel[]" value="WhatsApp"> WhatsApp</label>
@@ -2713,7 +2735,7 @@
         </div>
 
         <div class="form-consent" style="margin-top:16px;">
-          <label><input type="checkbox" name="consent" required> <span>Даю згоду на обробку персональних даних</span></label>
+          <label><input type="checkbox" name="consent" required> <span>Даю свою згоду на обробку даних</span></label>
         </div>
 
         <div class="form-actions">

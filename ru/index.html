@@ -673,7 +673,7 @@
               </ul>
             </nav>
             <div class="t461__alladditional">
-              <div class="t461__leftwrapper" style="padding-left: 20px; padding-right: 210px">
+              <div class="t461__leftwrapper" style="padding-left: 0; padding-right: 270px">
                 <div class="t461__additionalwrapper">
                   <a href="#form" class="scroll-btn">Запросить просчёт</a>
                 </div>
@@ -683,7 +683,7 @@
                 .scroll-btn {
                   display: inline-block;
                   padding: 10px 24px;
-                  background-color: black;
+                  background-color: #ff0000;
                   color: #fff !important;
                   font-weight: 600;
                   font-size: 20px;
@@ -1020,7 +1020,7 @@
 
       <style>
         .t469__title {
-          font-size: 54px !important;
+          font-size: 38px !important;
           margin-bottom: 10px !important;
         }
       </style>
@@ -1217,16 +1217,36 @@
                 разных отправителей в один транспорт или на одном складе, а также оформляя необходимые документы.</p>
 
               <p> <strong>Застрахованная ответственность перевозчика</strong> — вся деятельность компании
-                покрыта CMR-страхованием с лимитом ответственности до <strong>300 000 €.</strong></p>
+                покрыта CMR-страхованием с лимитом ответственности до <strong>300 000 €.</strong> <a class="btn-image" href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing"
+   target="_blank"
+   style="display:inline-flex; align-items:center; gap:8px; color:rgb(68,67,67); font-weight:600; text-decoration:none; transition:background .3s;">
+  <span>Проверить страховку</span>
+  <img src="images/tap.png" 
+       alt="Click icon" 
+       width="30" 
+       height="30"
+       style="display:inline-block; vertical-align:middle;">
+</a>
+      <style>
+        .btn-image:hover img {
+  animation: pulse 0.8s infinite;
+}
 
-              <div style="text-align:left;">
-                <a href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing"
-                  target="_blank"
-                  style="display:inline-block; background:#9c9596; color:#fff; padding:8px 16px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
-                  Проверить страховку
-                </a>
-              </div>
-
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+      </style></p>
               <p style="margin-top:24px;"><strong>Доверьте нам ваш груз — и убедитесь, что логистика может быть простой,
                 прозрачной и предсказуемой.</strong></p>
             </div>
@@ -1837,7 +1857,7 @@
 
             <div class="t431__data-part2" data-auto-correct-mobile-width="false" style="display:none">
               IT, AT, SLO, HR, CH;Италия, Австрия, Словения, Хорватия, Швейцария;3 р /нед.;4–9 дней
-              GB, NO, DK, SW;Великобритания, Норвегия, Дания, Швеция;2 р /нед.;7–10 дней
+              GB, NO, DK, SE;Великобритания, Норвегия, Дания, Швеция;2 р /нед.;7–10 дней
               FR, PT, ES;Франция, Португалия, Испания;2 р /нед.;7–10 дней
               DE, BE, NL;Германия, Бельгия, Нидерланды;2 р /нед.;7–10 дней
               HU, RO, BA, MK;Венгрия, Румыния, Босния и Герцеговина, Македония;3 р /нед.;4–7 дней
@@ -1902,8 +1922,8 @@
         <div class="t-container">
           <div class="t-col t-col_8">
             <div class="t-text t-text_md" field="text">
-              <div style="font-size:18px; padding-left: 100px;" data-customstyle="yes">
-                <strong>* Для стран, не указанных в списке, мы подбираем индивидуальные решения под конкретный запрос.</strong>
+              <div style="font-size:18px; padding-left: 100px; width: 100%;" data-customstyle="yes">
+              * Для стран, не указанных в списке, мы подбираем индивидуальные решения под конкретный запрос.
               </div>
             </div>
           </div>
@@ -2852,7 +2872,7 @@
         </div>
 
         <h3>Дополнительные услуги</h3>
-        <p class="form-section-subtitle">Отметьте нужное:</p>
+        <p class="form-section-subtitle" style="font-size: 13px;">Отметьте, если хотите заказать:</p>
         <div class="form-grid grid-cols-2">
           <div class="form-checkbox-group">
             <label><input type="checkbox" name="extra_services[]" value="Export customs"> Таможня при отправлении</label>
@@ -2862,7 +2882,7 @@
           <div class="form-field"><textarea name="comment" placeholder="Ваши уточнения..."></textarea></div>
         </div>
 
-        <h3>Как связаться</h3>
+        <h3>Как удобнее с вами связаться</h3>
         <div class="form-checkbox-group" style="flex-direction: row; gap: 20px;">
           <label><input type="checkbox" name="reply_channel[]" value="Email"> Email</label>
           <label><input type="checkbox" name="reply_channel[]" value="WhatsApp"> WhatsApp</label>
@@ -2872,7 +2892,7 @@
         </div>
 
         <div class="form-consent" style="margin-top:16px;">
-          <label><input type="checkbox" name="consent" required> <span>Даю согласие на обработку данных</span></label>
+          <label><input type="checkbox" name="consent" required> <span>Даю своё согласие на обработку данных</span></label>
         </div>
 
         <div class="form-actions">

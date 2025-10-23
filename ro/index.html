@@ -672,7 +672,7 @@
               </ul>
             </nav>
             <div class="t461__alladditional">
-              <div class="t461__leftwrapper" style="padding-left: 20px; padding-right: 210px">
+              <div class="t461__leftwrapper" style="padding-left: 0; padding-right: 270px">
                 <div class="t461__additionalwrapper">
                   <a href="#form" class="scroll-btn">Solicită o cotație</a>
                 </div>
@@ -682,7 +682,7 @@
                 .scroll-btn {
                   display: inline-block;
                   padding: 10px 24px;
-                  background-color: black;
+                  background-color: #ff0000;
                   color: #fff !important;
                   font-weight: 600;
                   font-size: 20px;
@@ -1213,14 +1213,36 @@
               </p>
 
               <p>   <strong>Răspunderea transportatorului asigurată</strong> — Întreaga activitate a companiei Libra
-                Logistic srl este acoperită de asigurare CMR, cu un plafon de răspundere de până la <strong>300 000 €</strong>.</p>
+                Logistic srl este acoperită de asigurare CMR, cu un plafon de răspundere de până la <strong>300 000 €</strong>. <a class="btn-image" href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing"
+   target="_blank"
+   style="display:inline-flex; align-items:center; gap:8px; color:rgb(68,67,67); font-weight:600; text-decoration:none; transition:background .3s;">
+  <span>Verifică polița de asigurare</span>
+  <img src="images/tap.png" 
+       alt="Click icon" 
+       width="30" 
+       height="30"
+       style="display:inline-block; vertical-align:middle;">
+</a>
+      <style>
+        .btn-image:hover img {
+  animation: pulse 0.8s infinite;
+}
 
-              <div style="text-align:left;">
-                <a href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing" target="_blank"
-                  style="display:inline-block; background:#9c9596; color:#fff; padding:8px 16px; border-radius:6px; font-weight:600; text-decoration:none; transition:background .3s;">
-                  Verifică polița de asigurare
-                </a>
-              </div>
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+      </style></p>
               <p style="margin-top:24px;"><strong>Încredințează-ne marfa ta — și convinge-te că logistica poate fi simplă,
                 transparentă și previzibilă.</strong></p>
             </div>
@@ -1846,7 +1868,7 @@
 
           <div class="t431__data-part2" data-auto-correct-mobile-width="false" style="display:none">
             IT, AT, SLO, HR, CH;Italia, Austria, Slovenia, Croația, Elveția;3 ori / săptămână;4–9 zile
-            GB, NO, DK, SW;Marea Britanie, Norvegia, Danemarca, Suedia;2 ori / săptămână;7–10 zile
+            GB, NO, DK, SE;Marea Britanie, Norvegia, Danemarca, Suedia;2 ori / săptămână;7–10 zile
             FR, PT, ES;Franța, Portugalia, Spania;2 ori / săptămână;7–10 zile
             DE, BE, NL;Germania, Belgia, Olanda;2 ori / săptămână;7–10 zile
             HU, RO, BA, MK;Hungary, Romania, Bosnia and Herzegovina, Macedonia;3 ori / săptămână;4–7 zile
@@ -1911,9 +1933,9 @@
       <div class="t-container">
         <div class="t-col t-col_8">
           <div class="t-text t-text_md" field="text">
-            <div style="font-size:18px; padding-left: 100px;" data-customstyle="yes">
-              <strong>* Pentru țările care nu sunt menționate în listă, oferim soluții individuale, adaptate fiecărei
-              solicitări.</strong>
+            <div style="font-size:18px; padding-left: 100px; width: 100%;" data-customstyle="yes">
+            * Pentru țările care nu sunt menționate în listă, oferim soluții individuale, adaptate fiecărei
+              solicitări.
             </div>
           </div>
         </div>
@@ -2337,7 +2359,7 @@
   </div>
     <style>
         .t469__title {
-          font-size: 54px !important;
+          font-size: 38px !important;
           margin-bottom: 10px !important;
         }
       </style>
@@ -2761,7 +2783,7 @@
         </div>
 
         <h3>Servicii suplimentare</h3>
-        <p class="form-section-subtitle">Bifați dacă doriți să comandați:</p>
+        <p class="form-section-subtitle" style="font-size: 13px;">Bifați dacă doriți să comandați:</p>
         <div class="form-grid grid-cols-2">
           <div class="form-checkbox-group">
             <label><input type="checkbox" name="extra_services[]" value="Export customs"> Formalități vamale la expediere</label>
@@ -2773,7 +2795,7 @@
           </div>
         </div>
 
-        <h3>Prin ce canal să vă contactăm?</h3>
+        <h3>Cum putem să vă contactăm mai ușor</h3>
         <div class="form-checkbox-group" style="flex-direction:row; gap:20px;">
           <label><input type="checkbox" name="reply_channel[]" value="Email"> Email</label>
           <label><input type="checkbox" name="reply_channel[]" value="WhatsApp"> WhatsApp</label>
@@ -2783,7 +2805,7 @@
         </div>
 
         <div class="form-consent" style="margin-top:16px;">
-          <label><input type="checkbox" name="consent" required> <span>Sunt de acord cu prelucrarea datelor cu caracter personal</span></label>
+          <label><input type="checkbox" name="consent" required> <span>Sunt de acord cu prelucrarea datelor mele</span></label>
         </div>
 
         <div class="form-actions">
