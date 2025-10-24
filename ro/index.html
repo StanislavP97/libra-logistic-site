@@ -1215,13 +1215,13 @@
               <p>   <strong>Răspunderea transportatorului asigurată</strong> — Întreaga activitate a companiei Libra
                 Logistic srl este acoperită de asigurare CMR, cu un plafon de răspundere de până la <strong>300 000 €</strong>. <a class="btn-image" href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing"
    target="_blank"
-   style="display:inline-flex; align-items:center; gap:8px; color:rgb(68,67,67); font-weight:600; text-decoration:none; transition:background .3s;">
+   style="display:inline-flex; align-items:center; gap:8px; color:#ff0000; font-weight:600; text-decoration:none; transition:background .3s;">
   <span>Verifică polița de asigurare</span>
   <img src="images/tap.png" 
        alt="Click icon" 
        width="30" 
        height="30"
-       style="display:inline-block; vertical-align:middle;">
+       style="display:inline-block; vertical-align:middle; position: relative; top: 17px; right: 26px;">
 </a>
       <style>
         .btn-image:hover img {
@@ -1267,7 +1267,16 @@
           <div class="t-divider t469__line t-margin_auto"></div>
         </div>
       </div>
-
+      <style>
+        @media screen and (max-width: 480px) {
+    .t-rec_pb_180 {
+        padding-bottom: 40px !important;
+    }
+        .t-rec_pt_180 {
+        padding-top: 40px !important;
+    }
+}
+      </style>
       <div class="clients-section">
         <div class="clients-container">
 
@@ -1933,7 +1942,7 @@
       <div class="t-container">
         <div class="t-col t-col_8">
           <div class="t-text t-text_md" field="text">
-            <div style="font-size:18px; padding-left: 100px; width: 100%;" data-customstyle="yes">
+            <div class="text-block" style="font-size:18px; padding-left: 100px; width: 100%;" data-customstyle="yes">
             * Pentru țările care nu sunt menționate în listă, oferim soluții individuale, adaptate fiecărei
               solicitări.
             </div>
@@ -1942,6 +1951,13 @@
       </div>
     </div>
   </div>
+          <style>
+  @media (max-width: 1024px) {
+    .text-block {
+      padding-left: 0 !important;
+    }
+  }
+</style>
   <div id="rec466673264" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
     <!-- T148 -->
     <!-- cover -->
@@ -2766,11 +2782,11 @@
         <div class="form-grid grid-cols-2">
           <div class="form-field">
             <label>Locul de încărcare*</label>
-            <input name="load_place" type="text" placeholder="Țara, indice, oraș" required>
+            <input name="load_place" type="text" placeholder="Țara, cod poștal, oraș" required>
           </div>
           <div class="form-field">
             <label>Destinație*</label>
-            <input name="destination" type="text" placeholder="Țara, indice, oraș" required>
+            <input name="destination" type="text" placeholder="Țara, cod poștal, oraș" required>
           </div>
           <div class="form-field">
             <label>Data disponibilității</label>

@@ -1200,13 +1200,13 @@
               <p><strong>Застрахована відповідальність перевізника</strong> — Вся діяльність компанії
                 покрита CMR-страхуванням із лімітом відповідальності до <strong>300 000 €.</strong> <a class="btn-image" href="https://drive.google.com/file/d/1Uyan5AgvWm_VeNhG5P5faowvuEO4LK4O/view?usp=sharing"
    target="_blank"
-   style="display:inline-flex; align-items:center; gap:8px; color:rgb(68,67,67); font-weight:600; text-decoration:none; transition:background .3s;">
+   style="display:inline-flex; align-items:center; gap:8px; color: #ff0000; font-weight:600; text-decoration:none; transition:background .3s;">
   <span>Перевірити страховку</span>
   <img src="images/tap.png" 
        alt="Click icon" 
        width="30" 
        height="30"
-       style="display:inline-block; vertical-align:middle;">
+       style="display:inline-block; vertical-align:middle; position: relative; top: 17px; right: 26px;">
 </a>
       <style>
         .btn-image:hover img {
@@ -1246,7 +1246,16 @@
       <div id="recClientsAnchor" class="r t-rec" data-record-type="215">
         <a name="our-clients" style="font-size:0;"></a>
       </div>
-
+      <style>
+        @media screen and (max-width: 480px) {
+    .t-rec_pb_180 {
+        padding-bottom: 40px !important;
+    }
+        .t-rec_pt_180 {
+        padding-top: 40px !important;
+    }
+}
+      </style>
       <div class="t469">
         <div class="t-align_center">
           <div>
@@ -1893,7 +1902,7 @@
         <div class="t-container">
           <div class="t-col t-col_8">
             <div class="t-text t-text_md" field="text">
-              <div style="font-size:18px; padding-left: 100px; width: 100%;" data-customstyle="yes">
+              <div class="text-block" style="font-size:18px; padding-left: 100px; width: 100%;" data-customstyle="yes">
               * Для країн, не зазначених у списку, ми підбираємо індивідуальні рішення під конкретний запит.
               </div>
             </div>
@@ -1901,6 +1910,14 @@
         </div>
       </div>
     </div>
+
+    <style>
+  @media (max-width: 1024px) {
+    .text-block {
+      padding-left: 0 !important;
+    }
+  }
+</style>
     <!-- ====== /ГЕОГРАФИЯ ПЕРЕВОЗОК ====== -->
     <div id="rec435413094" class="r t-rec" style="" data-animationappear="off" data-record-type="160">
       <!-- T148 -->
